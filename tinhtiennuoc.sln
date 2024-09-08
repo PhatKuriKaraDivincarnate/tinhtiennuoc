@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tinhtiennuoc", "tinhtiennuo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_tinhtiennuoc", "lib_tinhtiennuoc\lib_tinhtiennuoc.csproj", "{0ABF1D28-5E20-4904-B4B4-3F5A08FDA9C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tinhtiennuoc2", "tinhtiennuoc2\tinhtiennuoc2.csproj", "{9398523A-391D-4317-886B-308BC83E47BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0ABF1D28-5E20-4904-B4B4-3F5A08FDA9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ABF1D28-5E20-4904-B4B4-3F5A08FDA9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ABF1D28-5E20-4904-B4B4-3F5A08FDA9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9398523A-391D-4317-886B-308BC83E47BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9398523A-391D-4317-886B-308BC83E47BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9398523A-391D-4317-886B-308BC83E47BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9398523A-391D-4317-886B-308BC83E47BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
