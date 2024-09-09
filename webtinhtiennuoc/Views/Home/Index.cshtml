@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Tính Tiền Nước";
+}
+@model double?
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #0056b3;
+            }
+
+        .alert-success, .alert-danger {
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>@ViewData["Title"]</h2>
+
+        <!-- Form nhập số m3 nước -->
+        <form asp-controller="Home" asp-action="Calculate" method="post">
+            <div class="form-group">
+                <label for="soM3">Nhập số m3 nước đã sử dụng:</label>
+                <input type="number" id="soM3" name="soM3" min="0" placeholder="Nhập số m3" required />
+            </div>
+            <button type="submit">Tính tiền</button>
+        </form>
+
+        <!-- Hiển thị kết quả nếu Model có giá trị -->
+        @if (Model.HasValue)
+        {
+            <div class="alert-success">
+                <strong>Số tiền phải trả:</strong> @Model.Value VND
+            </div>
+        }
+
+        <!-- Hiển thị thông báo lỗi nếu có -->
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert-danger">
+                <strong>Lỗi:</strong> @ViewBag.Error
+            </div>
+        }
+    </div>
+</body>
+</html>
